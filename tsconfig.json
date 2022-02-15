@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "rootDir": "./src",
+        "lib": ["ES5", "ES6", "DOM"],
+
+        "allowJs": false,
+
+        "sourceMap": false,
+        "outDir": "./dist",
+        "removeComments": true,
+
+        "esModuleInterop": true,
+
+        "strict": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false,
+
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    }
+}

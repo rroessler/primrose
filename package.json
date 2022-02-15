@@ -1,0 +1,33 @@
+{
+    "name": "primrose-tween",
+    "version": "1.0.0",
+    "description": "Small Tweening Library.",
+    "main": "dist/primrose.cjs.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "dist": "npm run clean && tsc && node ./scripts/modulify.js && npm run minify",
+        "minify": "npm run minify:primrose && npm run minify:module",
+        "minify:primrose": "uglifyjs ./dist/primrose.js -o ./dist/primrose.min.js",
+        "minify:module": "uglifyjs ./dist/primrose.cjs.js -o ./dist/primrose.cjs.min.js",
+        "clean": "rm -rf ./dist"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.18",
+        "typescript": "^4.5.5",
+        "uglify-js": "^3.15.1"
+    },
+    "keywords": [
+        "Tween",
+        "Tweening",
+        "JavaScript",
+        "TypeScript",
+        "Small",
+        "Tiny"
+    ],
+    "author": "rroesslerio",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rroessler/primrose.git"
+    }
+}
