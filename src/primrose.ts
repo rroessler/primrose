@@ -23,7 +23,7 @@ interface IPrimrose<T> {
 const easingPower = (pow: number) => ({
     IN: (t: number) => Math.pow(t, pow),
     OUT: (t: number) => 1 - Math.abs(Math.pow(t - 1, pow)),
-    IN_OUT: (t: number) => (t < 0.5 ? Math.pow(t * 2, pow) / 2 : (1 - Math.abs(Math.pow(t * 2 - 2, pow))) / 2)
+    IN_OUT: (t: number) => (t < 0.5 ? Math.pow(t * 2, pow) / 2 : 1 - Math.pow(-2 * t + 2, pow) / 2)
 });
 
 /// Available Easing Functions.
