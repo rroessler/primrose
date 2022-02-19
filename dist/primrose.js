@@ -14,7 +14,7 @@ var _a, _b;
 var easingPower = function (pow) { return ({
     IN: function (t) { return Math.pow(t, pow); },
     OUT: function (t) { return 1 - Math.abs(Math.pow(t - 1, pow)); },
-    IN_OUT: function (t) { return (t < 0.5 ? Math.pow(t * 2, pow) / 2 : (1 - Math.abs(Math.pow(t * 2 - 2, pow))) / 2); }
+    IN_OUT: function (t) { return (t < 0.5 ? Math.pow(t * 2, pow) / 2 : 1 - Math.pow(-2 * t + 2, pow) / 2); }
 }); };
 var EASING = {
     LINEAR: function (t) { return t; },
